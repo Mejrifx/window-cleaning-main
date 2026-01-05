@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import beforeAfterImage from '@/assets/before-after.jpg';
+import beforeImage from '@/assets/before-dirty.jpg';
+import afterImage from '@/assets/after-clean.jpg';
 
 const BeforeAfterSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -62,33 +63,27 @@ const BeforeAfterSlider = () => {
           onTouchEnd={() => setIsDragging(false)}
           onTouchMove={handleTouchMove}
         >
-          {/* After image (clean - full) */}
+          {/* After image (clean - full background) */}
           <div className="absolute inset-0">
             <img 
-              src={beforeAfterImage} 
+              src={afterImage} 
               alt="Clean window view"
               className="h-full w-full object-cover"
-            />
-            {/* Subtle enhancement overlay for "clean" side */}
-            <div 
-              className="absolute inset-0 bg-gradient-to-r from-transparent to-ice/5"
-              style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
+              draggable={false}
             />
           </div>
 
-          {/* Before image (dirty - clipped) */}
+          {/* Before image (dirty - clipped from left) */}
           <div 
             className="absolute inset-0 overflow-hidden"
             style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
           >
             <img 
-              src={beforeAfterImage} 
+              src={beforeImage} 
               alt="Dirty window view"
               className="h-full w-full object-cover"
-              style={{ filter: 'brightness(0.85) contrast(0.9) saturate(0.8)' }}
+              draggable={false}
             />
-            {/* Grime overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/20" />
           </div>
 
           {/* Divider line */}
