@@ -83,7 +83,7 @@ const BeforeAfterSlider = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8 }}
-          className="relative aspect-video cursor-ew-resize rounded-lg overflow-hidden glass-card select-none"
+          className="relative aspect-[3/2] max-w-4xl mx-auto cursor-ew-resize rounded-lg overflow-hidden glass-card select-none"
           style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
           onMouseDown={handleMouseDown}
           onMouseUp={() => setIsDragging(false)}
