@@ -1,16 +1,28 @@
 import HeroSection from '@/components/HeroSection';
-import ServiceCards from '@/components/ServiceCards';
+import ServicesSection from '@/components/ServicesSection';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import ReviewsSection from '@/components/ReviewsSection';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
-import VideoSection from '@/components/VideoSection';
+import HowItWorks from '@/components/HowItWorks';
+import AboutSection from '@/components/AboutSection';
+import CTASection from '@/components/CTASection';
+import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 import ContactBar from '@/components/ContactBar';
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       <HeroSection />
-      <ServiceCards />
+      <ServicesSection />
+      <WhyChooseUs />
+      <ReviewsSection />
       <BeforeAfterSlider />
-      <VideoSection />
+      <HowItWorks />
+      <AboutSection />
+      <CTASection />
+      <ContactForm />
+      <Footer />
       <ContactBar />
     </main>
   );
