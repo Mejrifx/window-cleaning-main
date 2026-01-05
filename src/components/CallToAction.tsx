@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Phone, MessageCircle, ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const CallToAction = () => {
+  const { t } = useLanguage();
   return (
     <section className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Background gradient */}
@@ -16,10 +18,10 @@ const CallToAction = () => {
           className="text-center"
         >
           <h2 className="font-display text-4xl md:text-6xl font-light text-frost">
-            Ready for <span className="chrome-text">Crystal-Clear</span> Windows?
+            {t.ctaTitle}
           </h2>
           <p className="text-frost/60 mt-6 font-light text-lg max-w-xl mx-auto">
-            Get your free, no-obligation quote today. We respond within hours.
+            {t.ctaSubtitle}
           </p>
 
           {/* CTA buttons */}
@@ -31,7 +33,7 @@ const CallToAction = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Phone className="w-4 h-4" strokeWidth={1.5} />
-              Call Now
+              {t.ctaCall}
             </motion.a>
 
             <motion.a
@@ -43,7 +45,7 @@ const CallToAction = () => {
               whileTap={{ scale: 0.98 }}
             >
               <MessageCircle className="w-4 h-4" strokeWidth={1.5} />
-              WhatsApp Us
+              {t.ctaWhatsApp}
             </motion.a>
 
             <motion.a
@@ -52,7 +54,7 @@ const CallToAction = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Get Free Quote
+              {t.ctaGetQuote}
               <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
             </motion.a>
           </div>

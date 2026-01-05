@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-
-const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Why Us', href: '#why-us' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Process', href: '#process' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
+  const { t } = useLanguage();
+  
+  const navLinks = [
+    { label: t.navServices, href: '#services' },
+    { label: 'Why Us', href: '#why-us' },
+    { label: 'Reviews', href: '#reviews' },
+    { label: 'Gallery', href: '#gallery' },
+    { label: 'Process', href: '#process' },
+    { label: t.navAbout, href: '#about' },
+    { label: t.navContact, href: '#contact' },
+  ];
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -71,7 +74,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.02 }}
           >
             <span className="font-display text-xl md:text-2xl font-light tracking-widest chrome-text">
-              CRYSTALLINE
+              {t.businessName}
             </span>
             <motion.div
               className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-golden to-transparent"
@@ -116,18 +119,21 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <motion.button
-            onClick={() => scrollToSection('#contact')}
-            className="hidden md:flex btn-luxury text-chrome tracking-widest text-xs uppercase font-light"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Get Quote
-          </motion.button>
+          {/* Language Toggle & CTA */}
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageToggle />
+            <motion.button
+              onClick={() => scrollToSection('#contact')}
+              className="btn-luxury text-chrome tracking-widest text-xs uppercase font-light"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              {t.navGetQuote}
+            </motion.button>
+          </div>
 
           {/* Mobile Menu Button */}
           <motion.button
@@ -187,15 +193,18 @@ const Navbar = () => {
                   </motion.button>
                 ))}
 
-                <motion.button
-                  onClick={() => scrollToSection('#contact')}
-                  className="mt-6 btn-luxury text-chrome tracking-widest text-xs uppercase font-light w-full"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                >
-                  Get Free Quote
-                </motion.button>
+                <div className="mt-6 space-y-3">
+                  <LanguageToggle />
+                  <motion.button
+                    onClick={() => scrollToSection('#contact')}
+                    className="btn-luxury text-chrome tracking-widest text-xs uppercase font-light w-full"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    {t.navGetQuote}
+                  </motion.button>
+                </div>
               </div>
             </motion.div>
           </motion.div>

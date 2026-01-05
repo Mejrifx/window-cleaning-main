@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, Calendar, Sparkles, Smile } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const steps = [
   {
@@ -24,11 +25,12 @@ const steps = [
     number: '04',
     icon: Smile,
     title: 'Enjoy Crystal-Clear Results',
-    description: "Step back and admire the view. That's the Crystalline experience.",
+    description: "Step back and admire the view. That's the Verstraete Cleaning experience.",
   },
 ];
 
 const HowItWorks = () => {
+  const { t } = useLanguage();
   return (
     <section id="process" className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Background accent */}
@@ -47,10 +49,10 @@ const HowItWorks = () => {
             Simple Process
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4">
-            How It Works
+            {t.howItWorksTitle}
           </h2>
           <p className="text-frost/60 mt-4 font-light max-w-xl mx-auto">
-            Four easy steps to spotless windows
+            {t.howItWorksSubtitle}
           </p>
         </motion.div>
 

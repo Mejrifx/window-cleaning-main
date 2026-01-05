@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 import beforeImage from '@/assets/before-dirty.png';
 import afterImage from '@/assets/after-clean.png';
 
 const BeforeAfterSlider = () => {
+  const { t } = useLanguage();
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -69,10 +71,10 @@ const BeforeAfterSlider = () => {
         >
           <span className="text-xs tracking-[0.4em] text-chrome-dim uppercase">The Transformation</span>
           <h2 className="mt-4 font-display text-4xl md:text-6xl font-light chrome-text">
-            Witness The Difference
+            {t.beforeAfterTitle}
           </h2>
           <p className="mt-6 text-frost/50 font-light max-w-xl mx-auto">
-            Drag to reveal the stunning transformation. Watch as grime dissolves into crystal clarity.
+            {t.beforeAfterSubtitle}
           </p>
         </motion.div>
 
@@ -153,12 +155,12 @@ const BeforeAfterSlider = () => {
           {/* Labels */}
           <div className="absolute bottom-4 left-4 z-10 pointer-events-none select-none">
             <span className="px-3 py-1 text-xs tracking-[0.2em] text-frost/70 uppercase glass rounded-full">
-              Before
+              {t.before}
             </span>
           </div>
           <div className="absolute bottom-4 right-4 z-10 pointer-events-none select-none">
             <span className="px-3 py-1 text-xs tracking-[0.2em] text-frost/70 uppercase glass rounded-full">
-              After
+              {t.after}
             </span>
           </div>
         </motion.div>

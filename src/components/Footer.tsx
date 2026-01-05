@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Shield, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const serviceAreas = ['Downtown', 'Riverside Heights', 'Hillside', 'Business District', 'Waterfront', 'Suburbs'];
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-background border-t border-frost/10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
@@ -19,18 +21,18 @@ const Footer = () => {
               className="inline-block"
             >
               <span className="font-display text-2xl font-light tracking-widest chrome-text">
-                CRYSTALLINE
+                {t.businessName}
               </span>
             </motion.a>
             <p className="mt-4 text-frost/60 text-sm font-light leading-relaxed">
-              Premium window care for discerning clients. Crystal-clear results, every time.
+              {t.footerDescription}
             </p>
             
             {/* Insured badge */}
             <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-golden/20">
               <Shield className="w-4 h-4 text-golden" strokeWidth={1.5} />
               <span className="text-xs tracking-widest uppercase text-golden font-light">
-                Fully Insured
+                {t.footerInsured}
               </span>
             </div>
           </div>
@@ -38,7 +40,7 @@ const Footer = () => {
           {/* Service Areas */}
           <div>
             <h4 className="text-xs tracking-[0.2em] text-chrome-dim uppercase mb-6">
-              Service Areas
+              {t.footerServiceAreas}
             </h4>
             <ul className="space-y-3">
               {serviceAreas.map(area => (
@@ -54,7 +56,7 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="text-xs tracking-[0.2em] text-chrome-dim uppercase mb-6">
-              Contact
+              {t.footerContact}
             </h4>
             <ul className="space-y-4">
               <li>
@@ -64,16 +66,16 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@crystalline.com" className="flex items-center gap-3 text-frost/60 hover:text-frost transition-colors group">
+                <a href="mailto:hello@verstraetecleaning.com" className="flex items-center gap-3 text-frost/60 hover:text-frost transition-colors group">
                   <Mail className="w-4 h-4 text-golden" strokeWidth={1.5} />
-                  <span className="text-sm font-light">hello@crystalline.com</span>
+                  <span className="text-sm font-light">hello@verstraetecleaning.com</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-frost/60">
                   <MapPin className="w-4 h-4 text-golden mt-0.5" strokeWidth={1.5} />
                   <span className="text-sm font-light">
-                    Serving the Greater Metro Area
+                    {t.footerServing}
                   </span>
                 </div>
               </li>
@@ -83,7 +85,7 @@ const Footer = () => {
           {/* Social */}
           <div>
             <h4 className="text-xs tracking-[0.2em] text-chrome-dim uppercase mb-6">
-              Follow Us
+              {t.footerFollow}
             </h4>
             <div className="flex gap-3">
               {[Facebook, Instagram, Linkedin].map((Icon, index) => (
@@ -104,11 +106,11 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-frost/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-frost/40 text-sm font-light">
-            © {new Date().getFullYear()} Crystalline Premium Window Care. All rights reserved.
+            {t.footerCopyright}
           </p>
           <div className="flex gap-6 text-frost/40 text-sm font-light">
-            <a href="#" className="hover:text-frost transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-frost transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-frost transition-colors">{t.footerPrivacy}</a>
+            <a href="#" className="hover:text-frost transition-colors">{t.footerTerms}</a>
           </div>
         </div>
       </div>

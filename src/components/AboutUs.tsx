@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutUs = () => {
+  const { t } = useLanguage();
   return (
     <section id="about" className="py-24 md:py-32 bg-background relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
@@ -18,22 +20,22 @@ const AboutUs = () => {
           <div className="relative text-center">
             {/* Section header */}
             <span className="text-xs tracking-[0.3em] text-golden uppercase font-light">
-              About Us
+              {t.aboutSubtitle}
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4 mb-8">
-              Meet Crystalline
+              {t.aboutTitle}
             </h2>
 
             {/* Content */}
             <div className="space-y-4 text-frost/70 font-light leading-relaxed max-w-2xl mx-auto">
               <p>
-                Founded in 2020, Crystalline began with a simple belief: every window deserves to be crystal clear, and every client deserves exceptional service.
+                {t.aboutContent1}
               </p>
               <p>
-                We're a locally-owned team of trained professionals who take genuine pride in transforming your home or business. With over 500 satisfied clients across the region, we've built our reputation on reliability, attention to detail, and respect for your property.
+                {t.aboutContent2}
               </p>
               <p className="text-frost">
-                Our values are simple: <span className="text-golden">show up on time</span>, <span className="text-golden">do exceptional work</span>, and <span className="text-golden">leave every client smiling</span>.
+                {t.aboutContent3}
               </p>
             </div>
 
@@ -47,7 +49,7 @@ const AboutUs = () => {
             />
 
             <p className="mt-6 text-chrome-dim text-sm tracking-widest uppercase font-light">
-              — The Crystalline Team
+              {t.aboutTeam}
             </p>
           </div>
         </motion.div>

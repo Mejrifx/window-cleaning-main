@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Clock, Shield, Leaf, MapPin, Award } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const features = [
   {
@@ -30,6 +31,7 @@ const features = [
 ];
 
 const WhyChooseUs = () => {
+  const { t } = useLanguage();
   return (
     <section id="why-us" className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Background gradient */}
@@ -45,10 +47,10 @@ const WhyChooseUs = () => {
           className="text-center mb-16"
         >
           <span className="text-xs tracking-[0.3em] text-golden uppercase font-light">
-            Why Choose Us
+            {t.whyChooseUsTitle}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4">
-            The Crystalline Difference
+            {t.whyChooseUsSubtitle}
           </h2>
           <div className="mt-6 h-px w-24 bg-gradient-to-r from-transparent via-chrome to-transparent mx-auto" />
         </motion.div>

@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 import heroImage from '@/assets/hero-glass.jpg';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const [showTitle, setShowTitle] = useState(false);
   
@@ -60,7 +62,7 @@ const HeroSection = () => {
             {/* Glow effect */}
             <div className="absolute inset-0 blur-2xl bg-chrome/20 scale-150" />
             <span className="relative text-sm md:text-base tracking-[0.4em] text-chrome-dim uppercase font-light">
-              Established 2024
+              {t.since}
             </span>
           </div>
         </motion.div>
@@ -78,7 +80,7 @@ const HeroSection = () => {
                 animation: showTitle ? 'glass-wipe 1.2s ease-out forwards' : 'none',
               }}
             >
-              CRYSTALLINE
+              {t.businessName}
             </span>
           </motion.h1>
         </div>
@@ -90,7 +92,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="mt-6 text-lg md:text-xl tracking-[0.3em] text-frost/70 font-light uppercase"
         >
-          Premium Window Care
+          {t.heroSubtitle}
         </motion.p>
 
         {/* Decorative line */}
@@ -108,22 +110,10 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 1.8 }}
           className="btn-luxury mt-12 text-chrome tracking-widest text-sm uppercase font-light"
         >
-          Discover Excellence
+          {t.heroCta}
         </motion.button>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        style={{ opacity }}
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-xs tracking-[0.2em] text-chrome-dim uppercase">Scroll</span>
-          <div className="h-10 w-px bg-gradient-to-b from-chrome/50 to-transparent" />
-        </div>
-      </motion.div>
     </section>
   );
 };

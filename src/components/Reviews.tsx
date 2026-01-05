@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const reviews = [
   {
@@ -13,7 +14,7 @@ const reviews = [
     name: 'James & Emily Carter',
     location: 'Riverside Heights',
     rating: 5,
-    text: "We've tried other services before, but Crystalline is in a different league. The attention to detail is remarkable—even cleaned the frames and sills.",
+    text: "We've tried other services before, but Verstraete Cleaning is in a different league. The attention to detail is remarkable—even cleaned the frames and sills.",
     source: 'Google',
   },
   {
@@ -33,6 +34,7 @@ const reviews = [
 ];
 
 const Reviews = () => {
+  const { t } = useLanguage();
   return (
     <section id="reviews" className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Subtle pattern overlay */}
@@ -54,7 +56,7 @@ const Reviews = () => {
             Client Reviews
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4">
-            Trusted by Hundreds
+            {t.reviewsTitle}
           </h2>
           <div className="mt-4 flex items-center justify-center gap-1">
             {[...Array(5)].map((_, i) => (
