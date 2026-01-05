@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import beforeImage from '@/assets/before-dirty.jpg';
 import afterImage from '@/assets/after-clean.jpg';
@@ -7,6 +7,23 @@ const BeforeAfterSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Handle global mouse up to stop dragging
+  useEffect(() => {
+    const handleGlobalMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      document.addEventListener('mouseup', handleGlobalMouseUp);
+      document.addEventListener('touchend', handleGlobalMouseUp);
+    }
+
+    return () => {
+      document.removeEventListener('mouseup', handleGlobalMouseUp);
+      document.removeEventListener('touchend', handleGlobalMouseUp);
+    };
+  }, [isDragging]);
 
   const handleMove = (clientX: number) => {
     if (!containerRef.current) return;
@@ -19,12 +36,24 @@ const BeforeAfterSlider = () => {
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging) return;
+    e.preventDefault();
     handleMove(e.clientX);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging) return;
+    e.preventDefault();
     handleMove(e.touches[0].clientX);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
   };
 
   return (
@@ -54,35 +83,38 @@ const BeforeAfterSlider = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8 }}
-          className="relative aspect-[21/9] cursor-ew-resize rounded-lg overflow-hidden glass-card"
-          onMouseDown={() => setIsDragging(true)}
+          className="relative aspect-[21/9] cursor-ew-resize rounded-lg overflow-hidden glass-card select-none"
+          style={{ userSelect: 'none', WebkitUserSelect: 'none', MozUserSelect: 'none', msUserSelect: 'none' }}
+          onMouseDown={handleMouseDown}
           onMouseUp={() => setIsDragging(false)}
           onMouseLeave={() => setIsDragging(false)}
           onMouseMove={handleMouseMove}
-          onTouchStart={() => setIsDragging(true)}
+          onTouchStart={handleTouchStart}
           onTouchEnd={() => setIsDragging(false)}
           onTouchMove={handleTouchMove}
         >
           {/* After image (clean - full background) */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 pointer-events-none">
             <img 
               src={afterImage} 
               alt="Clean window view"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover select-none"
               draggable={false}
+              style={{ userSelect: 'none', pointerEvents: 'none' }}
             />
           </div>
 
           {/* Before image (dirty - clipped from left) */}
           <div 
-            className="absolute inset-0 overflow-hidden"
+            className="absolute inset-0 overflow-hidden pointer-events-none"
             style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
           >
             <img 
               src={beforeImage} 
               alt="Dirty window view"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover select-none"
               draggable={false}
+              style={{ userSelect: 'none', pointerEvents: 'none' }}
             />
           </div>
 
@@ -119,12 +151,12 @@ const BeforeAfterSlider = () => {
           </div>
 
           {/* Labels */}
-          <div className="absolute bottom-4 left-4 z-10">
+          <div className="absolute bottom-4 left-4 z-10 pointer-events-none select-none">
             <span className="px-3 py-1 text-xs tracking-[0.2em] text-frost/70 uppercase glass rounded-full">
               Before
             </span>
           </div>
-          <div className="absolute bottom-4 right-4 z-10">
+          <div className="absolute bottom-4 right-4 z-10 pointer-events-none select-none">
             <span className="px-3 py-1 text-xs tracking-[0.2em] text-frost/70 uppercase glass rounded-full">
               After
             </span>
