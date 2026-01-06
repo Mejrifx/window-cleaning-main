@@ -2,35 +2,41 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import beforeDirty from '@/assets/before-dirty.jpg';
-import afterClean from '@/assets/after-clean.jpg';
+import before1 from '@/assets/before1.jpg';
+import after1 from '@/assets/after1.jpg';
+import before2 from '@/assets/before2.jpg';
+import after2 from '@/assets/after2.jpg';
+import before3 from '@/assets/before3.jpg';
+import after3 from '@/assets/after3.jpg';
+import before4 from '@/assets/before4.jpg';
+import after4 from '@/assets/after4.jpg';
 
 const galleryItems = [
   {
     id: 1,
-    before: beforeDirty,
-    after: afterClean,
+    before: before1,
+    after: after1,
     title: 'Residential - Bay Windows',
     location: 'Riverside Heights',
   },
   {
     id: 2,
-    before: beforeDirty,
-    after: afterClean,
+    before: before2,
+    after: after2,
     title: 'Commercial - Storefront',
     location: 'Business District',
   },
   {
     id: 3,
-    before: beforeDirty,
-    after: afterClean,
+    before: before3,
+    after: after3,
     title: 'High-Rise - 15th Floor',
     location: 'Downtown',
   },
   {
     id: 4,
-    before: beforeDirty,
-    after: afterClean,
+    before: before4,
+    after: after4,
     title: 'Residential - Skylights',
     location: 'Hillside',
   },
