@@ -63,14 +63,14 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Hidden on mobile */}
           <motion.a
             href="#"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="relative group flex-shrink-0"
+            className="relative group flex-shrink-0 hidden md:block"
             whileHover={{ scale: 1.02 }}
           >
             <div className="flex flex-col leading-tight">
@@ -88,6 +88,12 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
             />
           </motion.a>
+
+          {/* Mobile Toggles - Show on mobile only, in place of logo */}
+          <div className="flex md:hidden items-center gap-3">
+            <LanguageToggle />
+            <ThemeToggle />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
@@ -124,7 +130,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Language Toggle & Theme Toggle */}
+          {/* Desktop Language Toggle & Theme Toggle */}
           <div className="hidden md:flex items-center gap-3">
             <LanguageToggle />
             <ThemeToggle />
