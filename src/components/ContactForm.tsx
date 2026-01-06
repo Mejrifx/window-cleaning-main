@@ -128,7 +128,7 @@ const ContactForm = () => {
             className="flex justify-center gap-4 mt-12"
           >
             <motion.a
-              href="#"
+              href="https://www.facebook.com/verstraetecleaning"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-lg glass border border-frost/10 flex items-center justify-center text-frost/60 hover:text-golden hover:border-golden/30 transition-all duration-300"
@@ -139,7 +139,7 @@ const ContactForm = () => {
               <Facebook className="w-5 h-5" strokeWidth={1.5} />
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.instagram.com/verstraetecleaning/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-lg glass border border-frost/10 flex items-center justify-center text-frost/60 hover:text-golden hover:border-golden/30 transition-all duration-300"
