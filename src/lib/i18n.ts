@@ -300,7 +300,7 @@ export const translations: Record<Language, Translations> = {
     aboutContent3: 'Onze waarden zijn eenvoudig: op tijd komen, uitzonderlijk werk leveren en elke klant met een glimlach achterlaten.',
     aboutTeam: '— Het Verstraete Cleaning Team',
     
-    ctaTitle: 'Klaar Voor Kristalheldere Ramen?',
+    ctaTitle: 'Wanneer mogen we bij u langskomen?',
     ctaSubtitle: 'Vraag vandaag nog uw gratis, vrijblijvende offerte aan. Wij reageren binnen enkele uren.',
     ctaCall: 'Bel Nu',
     ctaWhatsApp: 'WhatsApp Ons',
@@ -311,7 +311,7 @@ export const translations: Record<Language, Translations> = {
     contactInfo: 'Contactgegevens',
     contactPhone: 'Telefoon',
     contactEmail: 'E-mail',
-    contactAreas: 'Servicegebieden',
+    contactAreas: 'Adres',
     contactResponse: '⚡ Wij reageren op alle vragen binnen 2 uur tijdens kantooruren',
     contactWhatsAppTitle: 'Vraag Uw Gratis Offerte Aan',
     contactWhatsAppDesc: 'Neem contact met ons op via WhatsApp voor directe reactie en persoonlijke service',
@@ -319,7 +319,7 @@ export const translations: Record<Language, Translations> = {
     
     footerDescription: 'Premium ramenreiniging voor veeleisende klanten. Kristalheldere resultaten, elke keer.',
     footerInsured: 'Volledig Verzekerd',
-    footerServiceAreas: 'Servicegebieden',
+    footerServiceAreas: 'Adres',
     footerContact: 'Contact',
     footerFollow: 'Volg Ons',
     footerServing: 'Bedienen van de Grootstedelijke Regio',

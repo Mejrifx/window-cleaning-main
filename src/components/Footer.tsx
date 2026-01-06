@@ -2,8 +2,6 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Shield, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const serviceAreas = ['Downtown', 'Riverside Heights', 'Hillside', 'Business District', 'Waterfront', 'Suburbs'];
-
 const Footer = () => {
   const { t } = useLanguage();
   return (
@@ -37,20 +35,17 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Service Areas */}
+          {/* Address */}
           <div>
             <h4 className="text-xs tracking-[0.2em] text-chrome-dim uppercase mb-6">
               {t.footerServiceAreas}
             </h4>
-            <ul className="space-y-3">
-              {serviceAreas.map(area => (
-                <li key={area}>
-                  <span className="text-frost/60 text-sm font-light hover:text-frost transition-colors cursor-default">
-                    {area}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex items-start gap-3 text-frost/60">
+              <MapPin className="w-4 h-4 text-golden mt-0.5" strokeWidth={1.5} />
+              <span className="text-sm font-light">
+                Eurostraat 11, 4513AS Hoofdplaat
+              </span>
+            </div>
           </div>
 
           {/* Contact */}
@@ -60,22 +55,22 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+15551234567" className="flex items-center gap-3 text-frost/60 hover:text-frost transition-colors group">
+                <a href="tel:+31653853437" className="flex items-center gap-3 text-frost/60 hover:text-frost transition-colors group">
                   <Phone className="w-4 h-4 text-golden" strokeWidth={1.5} />
-                  <span className="text-sm font-light">+1 (555) 123-4567</span>
+                  <span className="text-sm font-light">+31 6 53853437</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@verstraetecleaning.com" className="flex items-center gap-3 text-frost/60 hover:text-frost transition-colors group">
+                <a href="mailto:contact@verstraete-cleaning.com" className="flex items-center gap-3 text-frost/60 hover:text-frost transition-colors group">
                   <Mail className="w-4 h-4 text-golden" strokeWidth={1.5} />
-                  <span className="text-sm font-light">hello@verstraetecleaning.com</span>
+                  <span className="text-sm font-light">contact@verstraete-cleaning.com</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-frost/60">
                   <MapPin className="w-4 h-4 text-golden mt-0.5" strokeWidth={1.5} />
                   <span className="text-sm font-light">
-                    {t.footerServing}
+                    Eurostraat 11, 4513AS Hoofdplaat
                   </span>
                 </div>
               </li>

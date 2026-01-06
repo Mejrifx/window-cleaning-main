@@ -27,7 +27,7 @@ const CallToAction = () => {
           {/* CTA buttons */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="tel:+15551234567"
+              href="tel:+31653853437"
               className="btn-luxury text-golden tracking-widest text-sm uppercase font-light flex items-center gap-3 w-full sm:w-auto justify-center"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -37,7 +37,7 @@ const CallToAction = () => {
             </motion.a>
 
             <motion.a
-              href="https://wa.me/15551234567"
+              href="https://wa.me/31653853437"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg glass border border-frost/20 text-frost/80 tracking-widest text-sm uppercase font-light flex items-center gap-3 hover:border-frost/40 transition-all duration-300 w-full sm:w-auto justify-center"

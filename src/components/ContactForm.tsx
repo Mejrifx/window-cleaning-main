@@ -40,23 +40,23 @@ const ContactForm = () => {
               </h3>
               
               <div className="space-y-6">
-                <a href="tel:+15551234567" className="flex items-center gap-4 group">
+                <a href="tel:+31653853437" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 rounded-xl glass border border-golden/20 flex items-center justify-center group-hover:border-golden/40 transition-colors">
                     <Phone className="w-5 h-5 text-golden" strokeWidth={1.5} />
                   </div>
                   <div>
                     <p className="text-frost/50 text-sm font-light">{t.contactPhone}</p>
-                    <p className="text-frost font-light">+1 (555) 123-4567</p>
+                    <p className="text-frost font-light">+31 6 53853437</p>
                   </div>
                 </a>
 
-                <a href="mailto:hello@verstraetecleaning.com" className="flex items-center gap-4 group">
+                <a href="mailto:contact@verstraete-cleaning.com" className="flex items-center gap-4 group">
                   <div className="w-12 h-12 rounded-xl glass border border-golden/20 flex items-center justify-center group-hover:border-golden/40 transition-colors">
                     <Mail className="w-5 h-5 text-golden" strokeWidth={1.5} />
                   </div>
                   <div>
                     <p className="text-frost/50 text-sm font-light">{t.contactEmail}</p>
-                    <p className="text-frost font-light">hello@verstraetecleaning.com</p>
+                    <p className="text-frost font-light">contact@verstraete-cleaning.com</p>
                   </div>
                 </a>
 
@@ -66,7 +66,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-frost/50 text-sm font-light">{t.contactAreas}</p>
-                    <p className="text-frost font-light">Downtown, Riverside, Hillside & Surrounding Areas</p>
+                    <p className="text-frost font-light">Eurostraat 11, 4513AS Hoofdplaat</p>
                   </div>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const ContactForm = () => {
                 </div>
 
                 <motion.a
-                  href="https://wa.me/15551234567"
+                  href="https://wa.me/31653853437"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-luxury text-golden tracking-widest text-sm uppercase font-light flex items-center justify-center gap-3 w-full"
