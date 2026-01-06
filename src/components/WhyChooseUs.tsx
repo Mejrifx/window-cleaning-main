@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Clock, Shield, Leaf, MapPin, Award } from 'lucide-react';
+import { Square, Droplets, Sun, Layers, Building2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhyChooseUs = () => {
@@ -7,27 +7,27 @@ const WhyChooseUs = () => {
   
   const features = [
     {
-      icon: Clock,
+      icon: Square,
       title: t.featureReliable,
       description: t.featureReliableDesc,
     },
     {
-      icon: Shield,
+      icon: Droplets,
       title: t.featureInsured,
       description: t.featureInsuredDesc,
     },
     {
-      icon: Leaf,
+      icon: Sun,
       title: t.featureEco,
       description: t.featureEcoDesc,
     },
     {
-      icon: MapPin,
+      icon: Layers,
       title: t.featureLocal,
       description: t.featureLocalDesc,
     },
     {
-      icon: Award,
+      icon: Building2,
       title: t.featureSatisfaction,
       description: t.featureSatisfactionDesc,
     },
