@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroImage from '@/assets/hero-glass.jpg';
+import { useTheme } from 'next-themes';
+import heroImageDark from '@/assets/hero-glass.jpg';
+import heroImageLight from '@/assets/hero-glass-light.jpg';
 
 const HeroSection = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
   const [showTitle, setShowTitle] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -18,9 +22,13 @@ const HeroSection = () => {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 1.1]);
 
   useEffect(() => {
+    setMounted(true);
     const timer = setTimeout(() => setShowTitle(true), 500);
     return () => clearTimeout(timer);
   }, []);
+
+  // Select image based on theme
+  const heroImage = mounted && theme === 'light' ? heroImageLight : heroImageDark;
 
   return (
     <section 
@@ -40,7 +48,7 @@ const HeroSection = () => {
         <img 
           src={heroImage} 
           alt="Pristine glass reflecting golden hour cityscape"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover transition-opacity duration-500"
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
