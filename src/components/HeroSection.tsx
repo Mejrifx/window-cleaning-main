@@ -112,14 +112,19 @@ const HeroSection = () => {
         />
 
         {/* CTA Button */}
-        <motion.button
+        <motion.a
+          href="https://wa.me/31653853437"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: showTitle ? 1 : 0, y: showTitle ? 0 : 20 }}
           transition={{ duration: 0.8, delay: 1.8 }}
           className="btn-luxury mt-12 text-chrome tracking-widest text-sm uppercase font-light"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
           {t.heroCta}
-        </motion.button>
+        </motion.a>
       </motion.div>
 
     </section>
