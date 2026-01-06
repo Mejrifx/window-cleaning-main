@@ -73,9 +73,14 @@ const Navbar = () => {
             className="relative group flex-shrink-0"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="font-display text-lg md:text-xl font-light tracking-widest chrome-text whitespace-nowrap">
-              {t.businessName}
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-lg md:text-xl font-light tracking-widest chrome-text">
+                VERSTRAETE
+              </span>
+              <span className="font-display text-lg md:text-xl font-light tracking-widest chrome-text">
+                CLEANING
+              </span>
+            </div>
             <motion.div
               className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-golden to-transparent"
               initial={{ scaleX: 0 }}
@@ -85,7 +90,7 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
+          <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link, index) => (
               <motion.button
                 key={link.label}
