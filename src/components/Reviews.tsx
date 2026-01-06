@@ -53,16 +53,16 @@ const Reviews = () => {
           className="text-center mb-16"
         >
           <span className="text-xs tracking-[0.3em] text-golden uppercase font-light">
-            Client Reviews
+            {t.reviewsTitle}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4">
-            {t.reviewsTitle}
+            {t.reviewsSubtitle}
           </h2>
           <div className="mt-4 flex items-center justify-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 text-golden fill-golden" />
             ))}
-            <span className="ml-2 text-frost/70 text-sm font-light">5.0 on Google</span>
+            <span className="ml-2 text-frost/70 text-sm font-light">{t.reviewsRating}</span>
           </div>
         </motion.div>
 
@@ -121,7 +121,7 @@ const Reviews = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-chrome-dim hover:text-golden transition-colors text-sm tracking-widest uppercase font-light"
           >
-            View All Reviews
+            {t.reviewsViewAll}
             <motion.span
               animate={{ x: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}

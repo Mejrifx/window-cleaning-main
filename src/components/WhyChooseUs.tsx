@@ -2,36 +2,36 @@ import { motion } from 'framer-motion';
 import { Clock, Shield, Leaf, MapPin, Award } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const features = [
-  {
-    icon: Clock,
-    title: 'Reliable & On-Time',
-    description: 'We respect your schedule. Every appointment confirmed, every promise kept.',
-  },
-  {
-    icon: Shield,
-    title: 'Fully Insured',
-    description: 'Complete peace of mind with comprehensive liability coverage on every job.',
-  },
-  {
-    icon: Leaf,
-    title: 'Eco-Friendly',
-    description: 'Premium biodegradable products that are safe for your family and the environment.',
-  },
-  {
-    icon: MapPin,
-    title: 'Local & Trusted',
-    description: 'Proudly serving our community with over 500 satisfied clients.',
-  },
-  {
-    icon: Award,
-    title: 'Satisfaction Guaranteed',
-    description: "Not happy? We'll return and make it right—no questions asked.",
-  },
-];
-
 const WhyChooseUs = () => {
   const { t } = useLanguage();
+  
+  const features = [
+    {
+      icon: Clock,
+      title: t.featureReliable,
+      description: t.featureReliableDesc,
+    },
+    {
+      icon: Shield,
+      title: t.featureInsured,
+      description: t.featureInsuredDesc,
+    },
+    {
+      icon: Leaf,
+      title: t.featureEco,
+      description: t.featureEcoDesc,
+    },
+    {
+      icon: MapPin,
+      title: t.featureLocal,
+      description: t.featureLocalDesc,
+    },
+    {
+      icon: Award,
+      title: t.featureSatisfaction,
+      description: t.featureSatisfactionDesc,
+    },
+  ];
   return (
     <section id="why-us" className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Background gradient */}

@@ -9,10 +9,10 @@ const Navbar = () => {
   
   const navLinks = [
     { label: t.navServices, href: '#services' },
-    { label: 'Why Us', href: '#why-us' },
-    { label: 'Reviews', href: '#reviews' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Process', href: '#process' },
+    { label: t.navWhyUs, href: '#why-us' },
+    { label: t.navReviews, href: '#reviews' },
+    { label: t.navGallery, href: '#gallery' },
+    { label: t.navProcess, href: '#process' },
     { label: t.navAbout, href: '#about' },
     { label: t.navContact, href: '#contact' },
   ];
@@ -90,7 +90,7 @@ const Navbar = () => {
               <motion.button
                 key={link.label}
                 onClick={() => scrollToSection(link.href)}
-                className="relative px-4 py-2 group"
+                className="relative px-3 py-2 group whitespace-nowrap"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
@@ -119,20 +119,9 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Language Toggle & CTA */}
+          {/* Language Toggle */}
           <div className="hidden md:flex items-center gap-3">
             <LanguageToggle />
-            <motion.button
-              onClick={() => scrollToSection('#contact')}
-              className="btn-luxury text-chrome tracking-widest text-xs uppercase font-light"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              {t.navGetQuote}
-            </motion.button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -193,17 +182,8 @@ const Navbar = () => {
                   </motion.button>
                 ))}
 
-                <div className="mt-6 space-y-3">
+                <div className="mt-6">
                   <LanguageToggle />
-                  <motion.button
-                    onClick={() => scrollToSection('#contact')}
-                    className="btn-luxury text-chrome tracking-widest text-xs uppercase font-light w-full"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    {t.navGetQuote}
-                  </motion.button>
                 </div>
               </div>
             </motion.div>

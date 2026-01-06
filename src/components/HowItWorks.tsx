@@ -2,35 +2,35 @@ import { motion } from 'framer-motion';
 import { MessageSquare, Calendar, Sparkles, Smile } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const steps = [
-  {
-    number: '01',
-    icon: MessageSquare,
-    title: 'Request a Quote',
-    description: 'Fill out our simple form or give us a call. We respond within hours.',
-  },
-  {
-    number: '02',
-    icon: Calendar,
-    title: 'Confirm Time & Price',
-    description: "We'll provide a transparent quote and schedule a time that works for you.",
-  },
-  {
-    number: '03',
-    icon: Sparkles,
-    title: 'We Clean Your Windows',
-    description: 'Our professionals arrive on time with all equipment. You relax.',
-  },
-  {
-    number: '04',
-    icon: Smile,
-    title: 'Enjoy Crystal-Clear Results',
-    description: "Step back and admire the view. That's the Verstraete Cleaning experience.",
-  },
-];
-
 const HowItWorks = () => {
   const { t } = useLanguage();
+  
+  const steps = [
+    {
+      number: '01',
+      icon: MessageSquare,
+      title: t.step1Title,
+      description: t.step1Desc,
+    },
+    {
+      number: '02',
+      icon: Calendar,
+      title: t.step2Title,
+      description: t.step2Desc,
+    },
+    {
+      number: '03',
+      icon: Sparkles,
+      title: t.step3Title,
+      description: t.step3Desc,
+    },
+    {
+      number: '04',
+      icon: Smile,
+      title: t.step4Title,
+      description: t.step4Desc,
+    },
+  ];
   return (
     <section id="process" className="py-24 md:py-32 bg-background relative overflow-hidden">
       {/* Background accent */}
@@ -46,7 +46,7 @@ const HowItWorks = () => {
           className="text-center mb-16"
         >
           <span className="text-xs tracking-[0.3em] text-golden uppercase font-light">
-            Simple Process
+            {t.howItWorksHeader}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4">
             {t.howItWorksTitle}

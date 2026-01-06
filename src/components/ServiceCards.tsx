@@ -1,28 +1,30 @@
 import { motion } from 'framer-motion';
 import { Building2, Home, Building } from 'lucide-react';
-
-const services = [
-  {
-    title: "Residential",
-    subtitle: "Private Estates & Homes",
-    description: "Bespoke window care for discerning homeowners. Every pane receives meticulous attention.",
-    icon: Home,
-  },
-  {
-    title: "Commercial",
-    subtitle: "Office & Retail Spaces",
-    description: "Elevate your business presence. Crystal-clear facades that reflect your commitment to excellence.",
-    icon: Building2,
-  },
-  {
-    title: "High-Rise",
-    subtitle: "Architectural Monuments",
-    description: "Specialized teams for the city's most demanding structures. No height is beyond our reach.",
-    icon: Building,
-  },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ServiceCards = () => {
+  const { t } = useLanguage();
+  
+  const services = [
+    {
+      title: t.residentialTitle,
+      subtitle: t.residentialSubtitle,
+      description: t.residentialDesc,
+      icon: Home,
+    },
+    {
+      title: t.commercialTitle,
+      subtitle: t.commercialSubtitle,
+      description: t.commercialDesc,
+      icon: Building2,
+    },
+    {
+      title: t.highRiseTitle,
+      subtitle: t.highRiseSubtitle,
+      description: t.highRiseDesc,
+      icon: Building,
+    },
+  ];
   return (
     <section className="relative py-32 px-4 md:px-8">
       {/* Background gradient */}
@@ -37,9 +39,9 @@ const ServiceCards = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-xs tracking-[0.4em] text-chrome-dim uppercase">Our Services</span>
+          <span className="text-xs tracking-[0.4em] text-chrome-dim uppercase">{t.servicesTitle}</span>
           <h2 className="mt-4 font-display text-4xl md:text-6xl font-light chrome-text">
-            Precision Crafted Care
+            {t.servicesHeader}
           </h2>
         </motion.div>
 
@@ -99,7 +101,7 @@ const ServiceCards = () => {
                   {/* Bottom line */}
                   <div className="mt-8 pt-6 border-t border-frost/10">
                     <span className="text-xs tracking-[0.3em] text-chrome-dim uppercase group-hover:text-chrome transition-colors duration-500 flex items-center gap-3">
-                      Explore
+                      {t.explore}
                       <motion.span
                         className="inline-block"
                         initial={{ x: 0 }}

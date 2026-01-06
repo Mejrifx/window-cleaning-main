@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import beforeDirty from '@/assets/before-dirty.jpg';
 import afterClean from '@/assets/after-clean.jpg';
 
@@ -36,6 +37,7 @@ const galleryItems = [
 ];
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [showAfter, setShowAfter] = useState<{ [key: number]: boolean }>({});
 
@@ -55,13 +57,13 @@ const Gallery = () => {
           className="text-center mb-16"
         >
           <span className="text-xs tracking-[0.3em] text-golden uppercase font-light">
-            Our Work
+            {t.galleryTitle}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4">
-            Before & After Gallery
+            {t.gallerySubtitle}
           </h2>
           <p className="text-frost/60 mt-4 font-light max-w-xl mx-auto">
-            Tap any image to see the transformation
+            {t.galleryDescription}
           </p>
         </motion.div>
 
@@ -111,7 +113,7 @@ const Gallery = () => {
                         ? 'border-golden/50 text-golden' 
                         : 'border-frost/20 text-frost/70'
                     }`}>
-                      {showAfter[item.id] ? 'After' : 'Before'}
+                      {showAfter[item.id] ? t.after : t.before}
                     </div>
                   </div>
                 </div>
@@ -123,7 +125,7 @@ const Gallery = () => {
                   whileHover={{ opacity: 1 }}
                 >
                   <span className="text-frost text-sm tracking-widest uppercase font-light">
-                    Tap to Toggle
+                    {t.galleryTapToToggle}
                   </span>
                 </motion.div>
               </div>
