@@ -70,10 +70,10 @@ const Navbar = () => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="relative group"
+            className="relative group flex-shrink-0"
             whileHover={{ scale: 1.02 }}
           >
-            <span className="font-display text-xl md:text-2xl font-light tracking-widest chrome-text">
+            <span className="font-display text-lg md:text-xl font-light tracking-widest chrome-text whitespace-nowrap">
               {t.businessName}
             </span>
             <motion.div
@@ -85,7 +85,7 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
             {navLinks.map((link, index) => (
               <motion.button
                 key={link.label}

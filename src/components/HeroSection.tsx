@@ -72,7 +72,7 @@ const HeroSection = () => {
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: showTitle ? 1 : 0 }}
-            className="font-display text-6xl md:text-8xl lg:text-9xl font-light tracking-wide"
+            className="font-display text-5xl md:text-6xl lg:text-7xl font-light tracking-wide"
           >
             <span 
               className="chrome-text inline-block"
