@@ -56,7 +56,7 @@ const HeroSection = () => {
 
       {/* Logo and title */}
       <motion.div 
-        className="absolute inset-0 flex flex-col items-center justify-center"
+        className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8"
         style={{ opacity }}
       >
         {/* Chrome logo */}
@@ -64,23 +64,23 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="mb-8"
+          className="mb-4 md:mb-8"
         >
           <div className="relative">
             {/* Glow effect */}
             <div className="absolute inset-0 blur-2xl bg-chrome/20 scale-150" />
-            <span className="relative text-sm md:text-base tracking-[0.4em] text-chrome-dim uppercase font-light">
+            <span className="relative text-xs sm:text-sm md:text-base tracking-[0.3em] sm:tracking-[0.4em] text-chrome-dim uppercase font-light text-center">
               {t.since}
             </span>
           </div>
         </motion.div>
 
         {/* Main title with glass-wipe effect */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden w-full max-w-5xl mx-auto">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: showTitle ? 1 : 0 }}
-            className="font-display text-5xl md:text-6xl lg:text-7xl font-light tracking-wide"
+            className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light tracking-tight sm:tracking-normal md:tracking-wide text-center px-2"
           >
             <span 
               className="chrome-text inline-block"
@@ -98,7 +98,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: showTitle ? 1 : 0, y: showTitle ? 0 : 20 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-6 text-lg md:text-xl tracking-[0.3em] text-frost font-light uppercase"
+          className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.2em] sm:tracking-[0.3em] text-frost font-light uppercase text-center px-4 max-w-2xl"
         >
           {t.heroSubtitle}
         </motion.p>
@@ -108,7 +108,7 @@ const HeroSection = () => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: showTitle ? 1 : 0 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="mt-10 h-px w-32 bg-gradient-to-r from-transparent via-chrome to-transparent"
+          className="mt-6 sm:mt-8 md:mt-10 h-px w-24 sm:w-32 bg-gradient-to-r from-transparent via-chrome to-transparent"
         />
 
         {/* CTA Button */}
@@ -119,7 +119,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: showTitle ? 1 : 0, y: showTitle ? 0 : 20 }}
           transition={{ duration: 0.8, delay: 1.8 }}
-          className="btn-luxury mt-12 text-chrome tracking-widest text-sm uppercase font-light"
+          className="btn-luxury mt-8 sm:mt-10 md:mt-12 text-chrome tracking-widest text-xs sm:text-sm uppercase font-light px-6 sm:px-8 py-2.5 sm:py-3"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
