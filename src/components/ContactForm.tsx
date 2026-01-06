@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { MessageCircle, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const ContactForm = () => {
@@ -118,6 +118,38 @@ const ContactForm = () => {
               </div>
             </motion.div>
           </div>
+          
+          {/* Social Media Icons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center gap-4 mt-12"
+          >
+            <motion.a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-lg glass border border-frost/10 flex items-center justify-center text-frost/60 hover:text-golden hover:border-golden/30 transition-all duration-300"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Facebook"
+            >
+              <Facebook className="w-5 h-5" strokeWidth={1.5} />
+            </motion.a>
+            <motion.a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-lg glass border border-frost/10 flex items-center justify-center text-frost/60 hover:text-golden hover:border-golden/30 transition-all duration-300"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5" strokeWidth={1.5} />
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </section>
