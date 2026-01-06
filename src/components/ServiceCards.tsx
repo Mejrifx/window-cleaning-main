@@ -39,7 +39,7 @@ const ServiceCards = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-xs tracking-[0.4em] text-chrome-dim uppercase">{t.servicesTitle}</span>
+          <span className="text-xs tracking-[0.4em] text-golden uppercase">{t.servicesTitle}</span>
           <h2 className="mt-4 font-display text-4xl md:text-6xl font-light chrome-text">
             {t.servicesHeader}
           </h2>
