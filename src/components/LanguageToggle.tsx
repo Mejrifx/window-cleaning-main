@@ -12,7 +12,7 @@ const LanguageToggle = () => {
   return (
     <motion.button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 px-3 py-2 rounded-lg glass border border-frost/20 text-frost/70 hover:text-frost hover:border-frost/40 transition-all duration-300"
+      className="flex items-center gap-2 px-3 py-2 rounded-lg glass border border-border/30 text-foreground/70 hover:text-foreground hover:border-border/50 transition-all duration-300"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       aria-label="Toggle language"

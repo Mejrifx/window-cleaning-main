@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const { t } = useLanguage();
@@ -123,9 +124,10 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Language Toggle */}
+          {/* Language Toggle & Theme Toggle */}
           <div className="hidden md:flex items-center gap-3">
             <LanguageToggle />
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -186,8 +188,9 @@ const Navbar = () => {
                   </motion.button>
                 ))}
 
-                <div className="mt-6">
+                <div className="mt-6 space-y-3">
                   <LanguageToggle />
+                  <ThemeToggle />
                 </div>
               </div>
             </motion.div>
