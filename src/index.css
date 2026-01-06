@@ -74,16 +74,16 @@
   .light {
     /* Luxury light theme - cream/ivory base */
     --background: 40 20% 98%;
-    --foreground: 220 20% 15%;
+    --foreground: 220 20% 8%;
 
     --card: 40 15% 96%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 220 20% 8%;
 
     --popover: 40 15% 97%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 220 20% 8%;
 
     /* Chrome/silver primary - darker for light mode */
-    --primary: 220 20% 25%;
+    --primary: 220 20% 20%;
     --primary-foreground: 40 20% 98%;
 
     /* Glass accent - deeper blue for light mode */
@@ -91,7 +91,7 @@
     --secondary-foreground: 40 20% 98%;
 
     --muted: 40 10% 85%;
-    --muted-foreground: 220 15% 40%;
+    --muted-foreground: 220 15% 25%;
 
     /* Golden hour accent - same */
     --accent: 35 80% 55%;
@@ -105,14 +105,14 @@
     --ring: 200 40% 50%;
 
     /* Custom luxury tokens for light mode */
-    --chrome: 220 20% 30%;
-    --chrome-dim: 220 15% 50%;
+    --chrome: 220 20% 20%;
+    --chrome-dim: 220 15% 35%;
     --glass: 200 30% 20%;
     --glass-dark: 200 20% 85%;
     --golden: 35 80% 55%;
     --golden-glow: 35 100% 65%;
-    --frost: 220 20% 15%;
-    --ice: 220 20% 25%;
+    --frost: 220 20% 8%;
+    --ice: 220 20% 15%;
 
     /* Gradients for light mode */
     --gradient-chrome: linear-gradient(135deg, hsl(220 20% 35%) 0%, hsl(220 15% 25%) 50%, hsl(220 20% 30%) 100%);

@@ -241,7 +241,7 @@ export const translations: Record<Language, Translations> = {
     
     servicesTitle: 'Onze Diensten',
     servicesSubtitle: 'Professionele ramenreiniging op maat van uw behoeften',
-    servicesHeader: 'Precisie Gemaakte Zorg',
+    servicesHeader: 'Hoe kunnen we u helpen?',
     residentialTitle: 'Voor alle privewoningen',
     residentialSubtitle: 'Privé Landgoederen & Woningen',
     residentialDesc: 'Beschikbaar in regio West Zeeuws Vlaanderen',

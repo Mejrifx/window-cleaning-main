@@ -16,29 +16,29 @@ const galleryItems = [
     id: 1,
     before: before1,
     after: after1,
-    title: 'Residential - Bay Windows',
-    location: 'Riverside Heights',
+    title: 'Reinigen van dakkapellen',
+    location: '',
   },
   {
     id: 2,
     before: before2,
     after: after2,
-    title: 'Commercial - Storefront',
-    location: 'Business District',
+    title: 'Schoonmaak van daken',
+    location: '',
   },
   {
     id: 3,
     before: before3,
     after: after3,
-    title: 'High-Rise - 15th Floor',
-    location: 'Downtown',
+    title: 'Schoonmaak van overstekken',
+    location: '',
   },
   {
     id: 4,
     before: before4,
     after: after4,
-    title: 'Residential - Skylights',
-    location: 'Hillside',
+    title: 'Reinigen van gevels',
+    location: '',
   },
 ];
 
@@ -114,7 +114,7 @@ const Gallery = () => {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-frost font-display text-lg">{item.title}</p>
-                      <p className="text-frost/50 text-sm font-light">{item.location}</p>
+                      {item.location && <p className="text-frost/50 text-sm font-light">{item.location}</p>}
                     </div>
                     <div className={`px-4 py-2 rounded-full glass border text-xs tracking-widest uppercase font-light transition-all duration-300 ${
                       showAfter[item.id] 
