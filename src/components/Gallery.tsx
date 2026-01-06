@@ -46,9 +46,11 @@ const Gallery = () => {
   const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [showAfter, setShowAfter] = useState<{ [key: number]: boolean }>({});
+  const [hasInteracted, setHasInteracted] = useState<{ [key: number]: boolean }>({});
 
   const toggleImage = (id: number) => {
     setShowAfter(prev => ({ ...prev, [id]: !prev[id] }));
+    setHasInteracted(prev => ({ ...prev, [id]: true }));
   };
 
   return (
@@ -124,16 +126,18 @@ const Gallery = () => {
                   </div>
                 </div>
 
-                {/* Tap hint */}
-                <motion.div
-                  className="absolute inset-0 flex items-center justify-center bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  animate={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                >
-                  <span className="text-frost text-sm tracking-widest uppercase font-light">
-                    {t.galleryTapToToggle}
-                  </span>
-                </motion.div>
+                {/* Tap hint - only show if user hasn't interacted with this image yet */}
+                {!hasInteracted[item.id] && (
+                  <motion.div
+                    className="absolute inset-0 flex items-center justify-center bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    animate={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    <span className="text-frost text-sm tracking-widest uppercase font-light">
+                      {t.galleryTapToToggle}
+                    </span>
+                  </motion.div>
+                )}
               </div>
             </motion.div>
           ))}
