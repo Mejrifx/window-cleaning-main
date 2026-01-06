@@ -10,7 +10,6 @@ const Navbar = () => {
   const navLinks = [
     { label: t.navServices, href: '#services' },
     { label: t.navWhyUs, href: '#why-us' },
-    { label: t.navReviews, href: '#reviews' },
     { label: t.navGallery, href: '#gallery' },
     { label: t.navProcess, href: '#process' },
     { label: t.navAbout, href: '#about' },

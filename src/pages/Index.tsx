@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ServiceCards from '@/components/ServiceCards';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import Reviews from '@/components/Reviews';
 import Gallery from '@/components/Gallery';
 import BeforeAfterSlider from '@/components/BeforeAfterSlider';
 import HowItWorks from '@/components/HowItWorks';
@@ -20,7 +19,6 @@ const Index = () => {
         <ServiceCards />
       </section>
       <WhyChooseUs />
-      <Reviews />
       <Gallery />
       <BeforeAfterSlider />
       <HowItWorks />
