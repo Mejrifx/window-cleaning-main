@@ -62,14 +62,14 @@ const Navbar = () => {
             : 'py-6'
         }`}
         style={{
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
+          backdropFilter: isScrolled ? undefined : 'blur(8px)',
+          WebkitBackdropFilter: isScrolled ? undefined : 'blur(8px)',
           backgroundColor: isScrolled 
             ? undefined 
-            : 'hsl(var(--glass-dark) / 0.3)',
+            : 'hsl(var(--glass-dark) / 0.15)',
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-full">
           {/* Logo - Hidden on mobile */}
           <motion.a
             href="#"
