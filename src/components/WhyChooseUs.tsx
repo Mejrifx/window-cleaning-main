@@ -117,6 +117,25 @@ const WhyChooseUs = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* YouTube Video */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="mt-16 md:mt-20"
+        >
+          <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden glass-card border border-frost/10">
+            <iframe
+              src="https://www.youtube.com/embed/OhqtNjLl1fc"
+              title="Verstraete Cleaning Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
