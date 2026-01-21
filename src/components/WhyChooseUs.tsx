@@ -1,31 +1,8 @@
 import { motion } from 'framer-motion';
-import { Sun, Blinds, Building2 } from 'lucide-react';
+import { Droplets, Sun, Blinds, Building2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-// Custom Cleaning Brush Icon - represents a window cleaning brush/squeegee
-const CleaningBrushIcon = ({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={strokeWidth}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    {/* Brush handle */}
-    <path d="M8 4 L8 16" />
-    {/* Brush head (squeegee/cleaning head) */}
-    <path d="M8 16 L16 16" />
-    {/* Bristles/cleaning surface */}
-    <path d="M9 18 L9 20 M11 18 L11 20 M13 18 L13 20 M15 18 L15 20" />
-    {/* Optional: water drops to show cleaning */}
-    <circle cx="10" cy="12" r="1" fill="currentColor" />
-    <circle cx="14" cy="12" r="1" fill="currentColor" />
-  </svg>
-);
-
-// Custom Gutter Icon - represents an actual gutter with downspout
+// Custom Gutter Icon - represents an actual gutter with downspout (used for window cleaning)
 const GutterIcon = ({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) => (
   <svg
     viewBox="0 0 24 24"
@@ -55,12 +32,12 @@ const WhyChooseUs = () => {
   
   const features = [
     {
-      icon: CleaningBrushIcon,
+      icon: GutterIcon,
       title: t.featureReliable,
       description: t.featureReliableDesc,
     },
     {
-      icon: GutterIcon,
+      icon: Droplets,
       title: t.featureInsured,
       description: t.featureInsuredDesc,
     },
