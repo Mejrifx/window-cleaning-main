@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import beforeImage from '@/assets/before-dirty.png';
-import afterImage from '@/assets/after-clean.png';
+import afterImage from '@/assets/after-clean.jpg';
 
 const BeforeAfterSlider = () => {
   const { t } = useLanguage();
