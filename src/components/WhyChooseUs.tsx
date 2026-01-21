@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { AppWindow, Minus, Sun, Blinds, Building2 } from 'lucide-react';
+import { Grid, RectangleHorizontal, Sun, Blinds, Building2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhyChooseUs = () => {
@@ -7,12 +7,12 @@ const WhyChooseUs = () => {
   
   const features = [
     {
-      icon: AppWindow,
+      icon: Grid,
       title: t.featureReliable,
       description: t.featureReliableDesc,
     },
     {
-      icon: Minus,
+      icon: RectangleHorizontal,
       title: t.featureInsured,
       description: t.featureInsuredDesc,
     },
