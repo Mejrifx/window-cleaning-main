@@ -32,7 +32,6 @@ export interface Translations {
   highRiseTitle: string;
   highRiseSubtitle: string;
   highRiseDesc: string;
-  explore: string;
   
   // Why Choose Us
   whyChooseUsTitle: string;
@@ -147,7 +146,6 @@ export const translations: Record<Language, Translations> = {
     highRiseTitle: 'High-Rise',
     highRiseSubtitle: 'Architectural Monuments',
     highRiseDesc: 'Specialized equipment and trained professionals for buildings of any height. Safety-certified and fully insured.',
-    explore: 'Explore',
     
     whyChooseUsTitle: 'Why Choose Us',
     whyChooseUsSubtitle: 'The Verstraete Cleaning Difference',
@@ -251,7 +249,6 @@ export const translations: Record<Language, Translations> = {
     highRiseTitle: 'Vakantieparken',
     highRiseSubtitle: 'Van vakantiehuizen tot chalets.',
     highRiseDesc: 'Voor al uw (zomer) klussen staan we ook voor u klaar.',
-    explore: 'Ontdek',
     
     whyChooseUsTitle: 'Wij leveren de volgende services',
     whyChooseUsSubtitle: 'Het Verstraete Cleaning Verschil',

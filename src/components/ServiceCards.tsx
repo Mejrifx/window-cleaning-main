@@ -97,20 +97,6 @@ const ServiceCards = () => {
                   <p className="text-frost/60 font-light leading-relaxed flex-grow">
                     {service.description}
                   </p>
-
-                  {/* Bottom line */}
-                  <div className="mt-8 pt-6 border-t border-frost/10">
-                    <span className="text-xs tracking-[0.3em] text-chrome-dim uppercase group-hover:text-chrome transition-colors duration-500 flex items-center gap-3">
-                      {t.explore}
-                      <motion.span
-                        className="inline-block"
-                        initial={{ x: 0 }}
-                        whileHover={{ x: 5 }}
-                      >
-                        →
-                      </motion.span>
-                    </span>
-                  </div>
                 </div>
 
                 {/* Edge highlight */}
