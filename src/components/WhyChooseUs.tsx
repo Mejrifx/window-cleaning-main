@@ -1,8 +1,31 @@
 import { motion } from 'framer-motion';
-import { Brush, Sun, Blinds, Building2 } from 'lucide-react';
+import { Sun, Blinds, Building2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-// Custom Gutter Icon - represents a horizontal gutter channel (U-shaped trough viewed from the side)
+// Custom Cleaning Brush Icon - represents a window cleaning brush/squeegee
+const CleaningBrushIcon = ({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    {/* Brush handle */}
+    <path d="M8 4 L8 16" />
+    {/* Brush head (squeegee/cleaning head) */}
+    <path d="M8 16 L16 16" />
+    {/* Bristles/cleaning surface */}
+    <path d="M9 18 L9 20 M11 18 L11 20 M13 18 L13 20 M15 18 L15 20" />
+    {/* Optional: water drops to show cleaning */}
+    <circle cx="10" cy="12" r="1" fill="currentColor" />
+    <circle cx="14" cy="12" r="1" fill="currentColor" />
+  </svg>
+);
+
+// Custom Gutter Icon - represents an actual gutter with downspout
 const GutterIcon = ({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) => (
   <svg
     viewBox="0 0 24 24"
@@ -13,12 +36,17 @@ const GutterIcon = ({ className, strokeWidth = 1.5 }: { className?: string; stro
     strokeLinejoin="round"
     className={className}
   >
-    {/* Gutter channel - U shape viewed from the side */}
-    <path d="M2 8 L2 12 L22 12 L22 8" />
-    {/* Top edge of gutter */}
-    <path d="M2 8 L22 8" />
-    {/* Optional: show it's attached to something (roof line) */}
-    <path d="M2 8 L4 6 M22 8 L20 6" />
+    {/* Roof edge above gutter */}
+    <path d="M2 6 L22 6" />
+    {/* Horizontal gutter channel (U-shaped trough) - front view */}
+    <path d="M2 8 L2 10 L22 10 L22 8" />
+    {/* Bottom of gutter channel */}
+    <path d="M2 10 L22 10" />
+    {/* Downspout pipe coming down from center of gutter */}
+    <path d="M12 10 L12 18" />
+    {/* Downspout opening/elbow at bottom */}
+    <path d="M12 18 L14 20" />
+    <path d="M10 20 L14 20" />
   </svg>
 );
 
@@ -27,7 +55,7 @@ const WhyChooseUs = () => {
   
   const features = [
     {
-      icon: Brush,
+      icon: CleaningBrushIcon,
       title: t.featureReliable,
       description: t.featureReliableDesc,
     },
