@@ -1,18 +1,38 @@
 import { motion } from 'framer-motion';
-import { Grid, RectangleHorizontal, Sun, Blinds, Building2 } from 'lucide-react';
+import { Brush, Sun, Blinds, Building2 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+// Custom Gutter Icon - represents a horizontal gutter channel (U-shaped trough viewed from the side)
+const GutterIcon = ({ className, strokeWidth = 1.5 }: { className?: string; strokeWidth?: number }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={strokeWidth}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    {/* Gutter channel - U shape viewed from the side */}
+    <path d="M2 8 L2 12 L22 12 L22 8" />
+    {/* Top edge of gutter */}
+    <path d="M2 8 L22 8" />
+    {/* Optional: show it's attached to something (roof line) */}
+    <path d="M2 8 L4 6 M22 8 L20 6" />
+  </svg>
+);
 
 const WhyChooseUs = () => {
   const { t } = useLanguage();
   
   const features = [
     {
-      icon: Grid,
+      icon: Brush,
       title: t.featureReliable,
       description: t.featureReliableDesc,
     },
     {
-      icon: RectangleHorizontal,
+      icon: GutterIcon,
       title: t.featureInsured,
       description: t.featureInsuredDesc,
     },
