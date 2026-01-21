@@ -67,9 +67,11 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="mb-4 md:mb-8"
         >
-          <div className="relative">
-            {/* Glow effect */}
-            <div className="absolute inset-0 blur-2xl bg-chrome/20 scale-150" />
+          <div className="relative inline-block px-4 py-2 rounded-lg" style={{
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            backgroundColor: 'hsl(var(--glass-dark) / 0.3)'
+          }}>
             <span 
               className="relative text-xs sm:text-sm md:text-base tracking-[0.3em] sm:tracking-[0.4em] chrome-text uppercase font-light text-center"
               style={{
@@ -90,11 +92,14 @@ const HeroSection = () => {
             className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-light tracking-tight sm:tracking-normal md:tracking-wide text-center px-2"
           >
             <span 
-              className="chrome-text inline-block"
+              className="chrome-text inline-block px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl"
               style={{
                 animation: showTitle ? 'glass-wipe 1.2s ease-out forwards' : 'none',
                 textShadow: '0 2px 12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.3)',
-                filter: 'drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3))'
+                filter: 'drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3))',
+                backdropFilter: 'blur(10px)',
+                WebkitBackdropFilter: 'blur(10px)',
+                backgroundColor: 'hsl(var(--glass-dark) / 0.3)'
               }}
             >
               {t.businessName}
@@ -107,10 +112,15 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: showTitle ? 1 : 0, y: showTitle ? 0 : 20 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.2em] sm:tracking-[0.3em] text-frost font-light uppercase text-center px-4 max-w-2xl"
+          className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl tracking-[0.2em] sm:tracking-[0.3em] text-frost font-light uppercase text-center px-4 max-w-2xl mx-auto inline-block"
           style={{
             textShadow: '0 2px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.2)',
-            filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))'
+            filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            backgroundColor: 'hsl(var(--glass-dark) / 0.3)',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '0.5rem'
           }}
         >
           {t.heroSubtitle}

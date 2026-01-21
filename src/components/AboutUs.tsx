@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import teamPicture from '@/assets/verstraete-team-picture.jpg';
 
 const AboutUs = () => {
   const { t } = useLanguage();
@@ -25,6 +26,23 @@ const AboutUs = () => {
             <h2 className="font-display text-4xl md:text-5xl font-light text-frost mt-4 mb-8">
               {t.aboutTitle}
             </h2>
+
+            {/* Team Picture */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="relative max-w-md mx-auto rounded-2xl overflow-hidden border border-frost/10">
+                <img 
+                  src={teamPicture} 
+                  alt="Verstraete Cleaning Team" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </motion.div>
 
             {/* Content */}
             <div className="space-y-4 text-frost/70 font-light leading-relaxed max-w-2xl mx-auto">
