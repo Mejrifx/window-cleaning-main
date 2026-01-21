@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
 import ThemeToggle from './ThemeToggle';
+import logo from '@/assets/verstraete-cleaning-logo.png';
 
 const Navbar = () => {
   const { t } = useLanguage();
@@ -80,14 +81,11 @@ const Navbar = () => {
             className="relative group flex-shrink-0 hidden md:block"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="flex flex-col leading-tight">
-              <span className="font-display text-lg md:text-xl font-light tracking-widest chrome-text">
-                VERSTRAETE
-              </span>
-              <span className="font-display text-lg md:text-xl font-light tracking-widest chrome-text">
-                CLEANING
-              </span>
-            </div>
+            <img 
+              src={logo} 
+              alt="Verstraete Cleaning Logo" 
+              className="h-10 md:h-12 w-auto object-contain"
+            />
             <motion.div
               className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-golden to-transparent"
               initial={{ scaleX: 0 }}
