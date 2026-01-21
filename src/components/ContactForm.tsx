@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageCircle, Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import { MessageCircle, Phone, Mail, MapPin, Facebook, Instagram, MessageSquare, Youtube } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const ContactForm = () => {
@@ -105,7 +105,7 @@ const ContactForm = () => {
                 </div>
 
                 <motion.a
-                  href="https://wa.me/31653853437"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfi4yEvRvt1aifJqudkHT0vGUGSeW1-1-G7yGVxrCeu3p4eww/viewform?usp=publish-editor"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-luxury text-golden tracking-widest text-sm uppercase font-light flex items-center justify-center gap-3 w-full"
@@ -128,6 +128,17 @@ const ContactForm = () => {
             className="flex justify-center gap-4 mt-12"
           >
             <motion.a
+              href="https://wa.me/31653853437"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-lg glass border border-frost/10 flex items-center justify-center text-frost/60 hover:text-golden hover:border-golden/30 transition-all duration-300"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="WhatsApp"
+            >
+              <MessageSquare className="w-5 h-5" strokeWidth={1.5} />
+            </motion.a>
+            <motion.a
               href="https://www.facebook.com/verstraetecleaning"
               target="_blank"
               rel="noopener noreferrer"
@@ -148,6 +159,17 @@ const ContactForm = () => {
               aria-label="Instagram"
             >
               <Instagram className="w-5 h-5" strokeWidth={1.5} />
+            </motion.a>
+            <motion.a
+              href="https://www.youtube.com/@verstraetecleaning7862"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-lg glass border border-frost/10 flex items-center justify-center text-frost/60 hover:text-golden hover:border-golden/30 transition-all duration-300"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="YouTube"
+            >
+              <Youtube className="w-5 h-5" strokeWidth={1.5} />
             </motion.a>
           </motion.div>
         </div>

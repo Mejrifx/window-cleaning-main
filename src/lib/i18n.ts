@@ -208,8 +208,8 @@ export const translations: Record<Language, Translations> = {
     contactAreas: 'Service Areas',
     contactResponse: '⚡ We respond to all inquiries during business hours',
     contactWhatsAppTitle: 'Get Your Free Quote',
-    contactWhatsAppDesc: 'Contact us via WhatsApp for instant response and personalized service',
-    contactWhatsAppButton: 'Message Us on WhatsApp',
+    contactWhatsAppDesc: 'Fill out this form for a free quote',
+    contactWhatsAppButton: 'Fill Out Form',
     
     footerDescription: 'Premium window care for discerning clients. Crystal-clear results, every time.',
     footerInsured: 'Fully Insured',
@@ -311,8 +311,8 @@ export const translations: Record<Language, Translations> = {
     contactAreas: 'Adres',
     contactResponse: '⚡ Wij reageren zo snel mogelijk',
     contactWhatsAppTitle: 'Vraag Uw Gratis Offerte Aan',
-    contactWhatsAppDesc: 'Neem contact met ons op via WhatsApp voor directe reactie en persoonlijke service',
-    contactWhatsAppButton: 'Stuur Ons Een WhatsApp Bericht',
+    contactWhatsAppDesc: 'Vul hier het formulier in',
+    contactWhatsAppButton: 'Vul hier het formulier in',
     
     footerDescription: 'Premium ramenreiniging voor veeleisende klanten. Kristalheldere resultaten, elke keer.',
     footerInsured: 'Volledig Verzekerd',
