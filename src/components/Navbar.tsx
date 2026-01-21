@@ -84,7 +84,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="Verstraete Cleaning Logo" 
-              className="h-10 md:h-12 w-auto object-contain"
+              className="h-14 md:h-16 w-auto object-contain"
             />
             <motion.div
               className="absolute -bottom-1 left-0 right-0 h-px bg-gradient-to-r from-transparent via-golden to-transparent"

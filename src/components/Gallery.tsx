@@ -10,6 +10,10 @@ import before3 from '@/assets/before3.jpg';
 import after3 from '@/assets/after3.jpg';
 import before4 from '@/assets/before4.jpg';
 import after4 from '@/assets/after4.jpg';
+import before5 from '@/assets/before5.jpeg';
+import after5 from '@/assets/after5.jpeg';
+import before6 from '@/assets/before6.jpeg';
+import after6 from '@/assets/after6.jpeg';
 
 const galleryItems = [
   {
@@ -38,6 +42,20 @@ const galleryItems = [
     before: before4,
     after: after4,
     title: 'Reinigen van gevels',
+    location: '',
+  },
+  {
+    id: 5,
+    before: before5,
+    after: after5,
+    title: 'Schoonmaak van rolluiken.',
+    location: '',
+  },
+  {
+    id: 6,
+    before: before6,
+    after: after6,
+    title: 'Schoonmaak van zonnepanelen',
     location: '',
   },
 ];
