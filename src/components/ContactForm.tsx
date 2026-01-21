@@ -66,7 +66,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <p className="text-frost/50 text-sm font-light">{t.contactAreas}</p>
-                    <p className="text-frost font-light">Eurostraat 11, 4513AS Hoofdplaat</p>
+                    <p className="text-frost font-light">Transportweg 13-010, 4501 PS Oostburg</p>
                   </div>
                 </div>
               </div>

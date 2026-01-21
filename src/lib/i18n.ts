@@ -225,7 +225,7 @@ export const translations: Record<Language, Translations> = {
     businessName: 'VERSTRAETE CLEANING',
     since: 'Sinds 2013',
     
-    heroSubtitle: 'Voor al uw cleaning.',
+    heroSubtitle: 'Voor al uw schoonmaak werkzaamheden',
     heroCta: 'Neem Contact met ons op',
     
     navServices: 'Diensten',
@@ -280,7 +280,7 @@ export const translations: Record<Language, Translations> = {
     
     howItWorksTitle: 'Hoe gaan we te werk?',
     howItWorksSubtitle: 'Eenvoudig, transparant, professioneel',
-    howItWorksHeader: 'Makkeljik en snel.',
+    howItWorksHeader: 'Makkelijk en snel.',
     step1Title: 'Vul het offerte formulier in',
     step1Desc: 'Wij zullen zo spoedig mogeljik reageren op uw aanvraag.',
     step2Title: 'Afspraak maken',
@@ -298,7 +298,7 @@ export const translations: Record<Language, Translations> = {
     aboutTeam: '— Het Verstraete Cleaning Team',
     
     ctaTitle: 'Wanneer mogen we bij u langskomen?',
-    ctaSubtitle: 'Vraag vandaag nog uw gratis, vrijblijvende offerte aan. Wij reageren binnen enkele uren.',
+    ctaSubtitle: 'Vraag vandaag nog uw gratis, vrijblijvende offerte aan. Wij reageren zo spoedig mogelijk.',
     ctaCall: 'Bel Nu',
     ctaWhatsApp: 'WhatsApp Ons',
     ctaGetQuote: 'Gratis Offerte',
