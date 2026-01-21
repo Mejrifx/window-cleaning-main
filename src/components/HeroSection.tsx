@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from 'next-themes';
 import heroImageDark from '@/assets/hero-glass.jpg';
 import heroImageLight from '@/assets/hero-glass-light.jpg';
+import heroImageNew from '@/assets/window-cleaning-hero.png';
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -27,8 +28,8 @@ const HeroSection = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Select image based on theme
-  const heroImage = mounted && theme === 'light' ? heroImageLight : heroImageDark;
+  // Select image based on theme - using new hero image for testing
+  const heroImage = heroImageNew;
 
   return (
     <section 
