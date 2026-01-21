@@ -166,7 +166,7 @@ export const translations: Record<Language, Translations> = {
     reviewsViewAll: 'View All Reviews',
     
     galleryTitle: 'Our Work',
-    gallerySubtitle: 'Before & After Gallery',
+    gallerySubtitle: 'Before & After',
     galleryDescription: 'Tap any image to see the transformation',
     galleryTapToToggle: 'Tap to Toggle',
     
@@ -269,7 +269,7 @@ export const translations: Record<Language, Translations> = {
     reviewsViewAll: 'Bekijk Alle Beoordelingen',
     
     galleryTitle: 'Ons Werk',
-    gallerySubtitle: 'Voor & Na Galerij',
+    gallerySubtitle: 'Voor & Na',
     galleryDescription: 'Tik op een afbeelding om de transformatie te zien',
     galleryTapToToggle: 'Tik om te Wisselen',
     
@@ -309,7 +309,7 @@ export const translations: Record<Language, Translations> = {
     contactPhone: 'Telefoon',
     contactEmail: 'E-mail',
     contactAreas: 'Adres',
-    contactResponse: '⚡ Wij reageren op alle vragen tijdens kantooruren',
+    contactResponse: '⚡ Wij reageren zo snel mogelijk',
     contactWhatsAppTitle: 'Vraag Uw Gratis Offerte Aan',
     contactWhatsAppDesc: 'Neem contact met ons op via WhatsApp voor directe reactie en persoonlijke service',
     contactWhatsAppButton: 'Stuur Ons Een WhatsApp Bericht',
