@@ -94,25 +94,25 @@ const BeforeAfterSlider = () => {
           onTouchEnd={() => setIsDragging(false)}
           onTouchMove={handleTouchMove}
         >
-          {/* After image (clean - full background) */}
+          {/* Before image (dirty - full background on right) */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
             <img 
-              src={afterImage} 
-              alt="Clean window view"
+              src={beforeImage} 
+              alt="Dirty window view"
               className="h-full w-full object-contain select-none"
               draggable={false}
               style={{ userSelect: 'none', pointerEvents: 'none' }}
             />
           </div>
 
-          {/* Before image (dirty - clipped from left) */}
+          {/* After image (clean - clipped from left) */}
           <div 
             className="absolute inset-0 overflow-hidden pointer-events-none flex items-center justify-center"
             style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
           >
             <img 
-              src={beforeImage} 
-              alt="Dirty window view"
+              src={afterImage} 
+              alt="Clean window view"
               className="h-full w-full object-contain select-none"
               draggable={false}
               style={{ userSelect: 'none', pointerEvents: 'none' }}
