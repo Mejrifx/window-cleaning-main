@@ -311,7 +311,7 @@ export const translations: Record<Language, Translations> = {
     contactAreas: 'Adres',
     contactResponse: '⚡ Wij reageren zo snel mogelijk',
     contactWhatsAppTitle: 'Vraag Uw Gratis Offerte Aan',
-    contactWhatsAppDesc: 'Vul hier het formulier in',
+    contactWhatsAppDesc: 'Voor een vrijblijvende offerte vult u dit formulier in, wij zullen u zo spoedig mogelijk een email sturen om een afspraak te maken.',
     contactWhatsAppButton: 'Vul hier het formulier in',
     
     footerDescription: 'Premium ramenreiniging voor veeleisende klanten. Kristalheldere resultaten, elke keer.',
