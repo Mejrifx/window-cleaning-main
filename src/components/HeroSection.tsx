@@ -48,7 +48,7 @@ const HeroSection = () => {
       >
         <img 
           src={heroImage} 
-          alt="Pristine glass reflecting golden hour cityscape"
+          alt="Pristine glass reflecting ocean blue cityscape"
           className="h-full w-full object-cover transition-opacity duration-500"
         />
         {/* Gradient overlay */}

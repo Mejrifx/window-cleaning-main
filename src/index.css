@@ -27,9 +27,9 @@
     --muted: 220 15% 18%;
     --muted-foreground: 210 10% 60%;
 
-    /* Golden hour accent */
-    --accent: 35 80% 55%;
-    --accent-foreground: 35 10% 10%;
+    /* Ocean blue accent */
+    --accent: 195 85% 55%;
+    --accent-foreground: 195 10% 10%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
@@ -45,21 +45,21 @@
     --chrome-dim: 210 15% 50%;
     --glass: 200 30% 95%;
     --glass-dark: 200 20% 15%;
-    --golden: 35 80% 55%;
-    --golden-glow: 35 100% 65%;
+    --golden: 195 85% 55%;
+    --golden-glow: 195 100% 65%;
     --frost: 200 30% 98%;
     --ice: 200 50% 85%;
 
     /* Gradients */
     --gradient-chrome: linear-gradient(135deg, hsl(210 20% 90%) 0%, hsl(210 15% 70%) 50%, hsl(210 20% 85%) 100%);
-    --gradient-golden: linear-gradient(135deg, hsl(35 80% 50%) 0%, hsl(40 90% 65%) 100%);
+    --gradient-golden: linear-gradient(135deg, hsl(195 85% 50%) 0%, hsl(200 90% 65%) 100%);
     --gradient-glass: linear-gradient(180deg, hsl(200 30% 95% / 0.1) 0%, hsl(200 30% 95% / 0.05) 100%);
     --gradient-frost: linear-gradient(180deg, hsl(200 30% 100% / 0.15) 0%, hsl(200 20% 90% / 0.05) 100%);
 
     /* Shadows */
     --shadow-glass: 0 8px 32px hsl(200 30% 10% / 0.3);
     --shadow-lift: 0 20px 60px hsl(200 30% 5% / 0.4);
-    --shadow-glow: 0 0 40px hsl(35 80% 55% / 0.3);
+    --shadow-glow: 0 0 40px hsl(195 85% 55% / 0.3);
 
     --sidebar-background: 220 20% 6%;
     --sidebar-foreground: 210 40% 96%;
@@ -93,8 +93,8 @@
     --muted: 40 10% 85%;
     --muted-foreground: 220 15% 25%;
 
-    /* Golden hour accent - same */
-    --accent: 35 80% 55%;
+    /* Ocean blue accent - same */
+    --accent: 195 85% 55%;
     --accent-foreground: 40 20% 98%;
 
     --destructive: 0 62.8% 50%;
@@ -109,21 +109,21 @@
     --chrome-dim: 220 15% 25%;
     --glass: 200 30% 20%;
     --glass-dark: 200 20% 85%;
-    --golden: 35 80% 55%;
-    --golden-glow: 35 100% 65%;
+    --golden: 195 85% 55%;
+    --golden-glow: 195 100% 65%;
     --frost: 220 20% 5%;
     --ice: 220 20% 10%;
 
     /* Gradients for light mode */
     --gradient-chrome: linear-gradient(135deg, hsl(220 20% 25%) 0%, hsl(220 15% 15%) 50%, hsl(220 20% 20%) 100%);
-    --gradient-golden: linear-gradient(135deg, hsl(35 80% 50%) 0%, hsl(40 90% 65%) 100%);
+    --gradient-golden: linear-gradient(135deg, hsl(195 85% 50%) 0%, hsl(200 90% 65%) 100%);
     --gradient-glass: linear-gradient(180deg, hsl(200 30% 20% / 0.1) 0%, hsl(200 30% 20% / 0.05) 100%);
     --gradient-frost: linear-gradient(180deg, hsl(220 20% 15% / 0.15) 0%, hsl(220 20% 10% / 0.05) 100%);
 
     /* Shadows for light mode */
     --shadow-glass: 0 8px 32px hsl(220 20% 5% / 0.1);
     --shadow-lift: 0 20px 60px hsl(220 20% 5% / 0.15);
-    --shadow-glow: 0 0 40px hsl(35 80% 55% / 0.2);
+    --shadow-glow: 0 0 40px hsl(195 85% 55% / 0.2);
 
     --sidebar-background: 40 15% 97%;
     --sidebar-foreground: 220 20% 15%;
@@ -275,7 +275,7 @@
     );
   }
 
-  /* Golden glow */
+  /* Ocean blue glow */
   .glow-golden {
     text-shadow: 0 0 20px hsl(var(--golden) / 0.5);
   }
