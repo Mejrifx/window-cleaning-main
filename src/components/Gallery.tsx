@@ -48,7 +48,7 @@ const galleryItems = [
     id: 5,
     before: before5,
     after: after5,
-    title: 'Schoonmaak van rolluiken.',
+    title: 'Schoonmaak van rolluiken',
     location: '',
   },
   {
