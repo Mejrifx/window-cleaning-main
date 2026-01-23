@@ -11,13 +11,13 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    // Check localStorage first, then browser language, default to Dutch
+    // Check localStorage first, default to Dutch (NL)
     const saved = localStorage.getItem('language') as Language;
     if (saved && (saved === 'en' || saved === 'nl')) {
       return saved;
     }
-    const browserLang = navigator.language.split('-')[0];
-    return browserLang === 'en' ? 'en' : 'nl';
+    // Always default to Dutch (NL) for new visitors
+    return 'nl';
   });
 
   const setLanguage = (lang: Language) => {
